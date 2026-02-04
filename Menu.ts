@@ -10,7 +10,7 @@ export function main() {
         console.log(colors.bg.black, colors.fg.yellowstrong, 
                     "*****************************************************");
         console.log("                                                     ");
-        console.log("                BANCO DO POVO                        ");
+        console.log("                BANCO DO POVOO                        ");
         console.log("                                                     ");
         console.log("*****************************************************");
         console.log("                                                     ");
