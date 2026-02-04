@@ -10,7 +10,7 @@ export function main() {
         console.log(colors.bg.black, colors.fg.yellowstrong, 
                     "*****************************************************");
         console.log("                                                     ");
-        console.log("                BANCO DO BRAZIL COM Z                ");
+        console.log("                BANCO DO POVO                        ");
         console.log("                                                     ");
         console.log("*****************************************************");
         console.log("                                                     ");
@@ -33,7 +33,7 @@ export function main() {
 
         if (opcao == 9) {
             console.log(colors.fg.magentastrong, 
-                "\nBanco do Brazil com Z - O seu Futuro começa aqui!");
+                "\nBanco do Povo - O seu Futuro começa aqui!");
             sobre();
             console.log(colors.reset, "");
             process.exit(0);
