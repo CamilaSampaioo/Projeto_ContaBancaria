@@ -1,6 +1,7 @@
-import readlinesync = require("readline-sync");
+//import readlinesync = require("readline-sync"); trocamos pelo Input
 import { colors } from './src/util/Colors';
 import { Conta } from "./src/model/Conta";
+import { Input } from "./src/util/Input";
 
 export function main() {
 
@@ -52,8 +53,8 @@ export function main() {
         console.log("                                                     ", 
         colors.reset);
 
-        console.log("Entre com a opção desejada: ");
-        opcao = readlinesync.questionInt("");
+        console.log("Entre com a opção desejada: ");    //pergunta com acento e sempre dentro do console.
+        opcao = Input.questionInt("");                  //pergunta sem acento e dentro do input.
 
         if (opcao == 9) {
             console.log(colors.fg.magentastrong, 
@@ -136,7 +137,7 @@ function sobre(): void {
 function keyPress(): void {
     console.log(colors.reset, "");
     console.log("\nPressione enter para continuar...");
-    readlinesync.prompt();
+    Input.prompt();
 }
 
 main();
