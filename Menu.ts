@@ -2,33 +2,52 @@
 import { colors } from './src/util/Colors';
 import { Conta } from "./src/model/Conta";
 import { Input } from "./src/util/Input";
+import { ContaCorrente } from './src/model/ContaCorrente';
+import { ContaPoupanca } from './src/model/ContaPoupanca';
 
 export function main() {
 
     let opcao: number;
 
-    // Instanciar Objetos da Classe Conta
+       // *** Testes da Classe Conta Corrente ***
 
-    const c1 = new Conta(1, 1234, "Sofia", 1, 100000.00);
-    
-    c1. visualizar();
+    console.log("\nTestes - Classe Conta Corrente");
 
-    // Teste do Método Sacar
-    console.log("Sacar 100,00: ", c1.sacar(100.00));
-    console.log("Sacar 200000.00 ", c1.sacar(200000.00))
-    console.log("Sacar 0.00 ", c1.sacar(0.00))
+    const cc1 = new ContaCorrente(1, 5678, "Bianca", 1, 200000.00, 2000.00);
 
-    // Teste do Método Depositar
-    console.log("Depositar -10.00 ");
-    c1.depositar(-10.00)
+    cc1.visualizar();
+  
+    console.log("\nSacar 1000.00");
+    console.log("\n", cc1.sacar(1000.00));
 
-    console.log("Depositar 500.00 ");
-    c1.depositar(500.00);
-    
-    c1. visualizar();
-    
-    // console.log("O titular da Conta é: ", c1.titular);
-    // console.log("O Saldo da Conta é: ", c1.saldo);
+    console.log("\nSacar 200000.00");
+    console.log("\n", cc1.sacar(200000.00));
+
+    console.log("\nDepositar 500.00");
+    cc1.depositar(500.00);
+
+    cc1.visualizar();
+
+    // *** Testes da Classe Conta Poupanca ***
+
+    console.log("\nTestes - Classe Conta Poupança");
+
+    const cp1 = new ContaPoupanca(2, 1234, "Paula", 1, 2000.00, 12);
+     
+    cc1.visualizar();
+
+ console.log("\nSacar 1000.00");
+    console.log("\n", cp1.sacar(1000.00));
+
+    console.log("\nSacar 2100.00");
+    console.log("\n", cp1.sacar(2100.00));
+
+    console.log("\nDepositar 500.00");
+    cp1.depositar(500.00);
+
+    cp1.visualizar();
+
+    console.log("\n");
 
     while (true) {
 
@@ -134,6 +153,7 @@ function sobre(): void {
     console.log("*****************************************************");
 }
 
+/* Função de pausa entre as opções do menu */
 function keyPress(): void {
     console.log(colors.reset, "");
     console.log("\nPressione enter para continuar...");

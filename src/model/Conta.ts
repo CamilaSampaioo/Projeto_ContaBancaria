@@ -1,6 +1,6 @@
 import { colors } from "../util/Colors";
 
-export class Conta{
+export abstract class Conta{
 
     // Atributos da Classe
     private _numero: number;
@@ -16,6 +16,7 @@ export class Conta{
 		this._titular = titular;
 		this._tipo = tipo;
 		this._saldo = saldo;
+
 	}
 
      // Métodos Get e Set
@@ -60,6 +61,7 @@ export class Conta{
 	}
 
     // Métodos Auxiliares
+
 
     public sacar(valor: number): boolean {
 
